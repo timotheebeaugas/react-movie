@@ -80,6 +80,7 @@
     line-height: 20px;
     height: 160px;
     overflow-y: scroll;
+    scrollbar-width: none;
 
     &::-webkit-scrollbar {
       display: none;
@@ -98,11 +99,18 @@
     cursor: pointer;
     transition: 0.2s;
     z-index: 50;
+    user-select: none;
 
     &:hover {
       background: #212040;
       box-shadow: 0 0 10px #546ee4d2;
       font-size: 1.025rem;
+    }
+    &:active {
+      transform: scale(1.5);
+      color: $white;
+      background: $black;
+      transform: translateX(-50%);
     }
   }
 }
